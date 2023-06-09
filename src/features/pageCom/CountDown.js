@@ -53,7 +53,7 @@ function CountDown() {
           xs={12}
           align="center"
         >
-          <Typography variant="h2" component="h2" gutterBottom sx={{ paddingBottom: "10vh" }}>
+          <Typography variant="h1" component="h2" gutterBottom sx={{ paddingBottom: "10vh" }}>
             {remainingTime.days}days: {remainingTime.hours} hours:
             {remainingTime.minutes}minutes:
             {remainingTime.seconds}seconds

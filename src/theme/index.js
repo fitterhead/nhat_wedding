@@ -44,7 +44,7 @@ const TYPOGRAPHY = {
     fontFamily: "EB Garamond",
     fontStyle: "normal",
     fontWeight: 400,
-    fontSize: "20px",
+    fontSize: "16px",
     lineHeight: "110%",
     // letterSpacing:
   },
@@ -125,7 +125,7 @@ const TYPOGRAPHY = {
     fontFamily: "EB Garamond",
     fontStyle: "italic",
     fontWeight: 400,
-    fontSize: "60px",
+    fontSize: "50px",
     lineHeight: "120%",
     // letterSpacing:
   },
