@@ -7,6 +7,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import ImageCom from "./ImageCom";
 
 const timelineData = [
   { time: "17:00 pm", label: "Welcome photos" },
@@ -23,28 +24,36 @@ export default function TimeLine() {
       alignItems="center"
       style={{ minHeight: "100vh" }}
     >
-      <Grid item xs={12} align="center">
+      <Grid
+        item
+        xs={12}
+        align="center"
+        style={{ minHeight: "100vh" }}
+        sx={{ paddingBottom: "6vh", paddingTop: "20vh" }}
+      >
         <Typography variant="h1" component="h2">
           WEDDING TIMELINE
         </Typography>
+
+        {/* <Grid item> */}
+        <Timeline position="alternate">
+          {timelineData.map((item, index) => (
+            <TimelineItem key={index}>
+              <TimelineOppositeContent color="text.secondary">
+                {item.time}
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                {index !== timelineData.length - 1 && <TimelineConnector />}
+              </TimelineSeparator>
+              <TimelineContent>
+                <Typography variant="h1">{item.label}</Typography>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
       </Grid>
-      {/* <Grid item> */}
-      <Timeline position="alternate">
-        {timelineData.map((item, index) => (
-          <TimelineItem key={index}>
-            <TimelineOppositeContent color="text.secondary">
-              {item.time}
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot />
-              {index !== timelineData.length - 1 && <TimelineConnector />}
-            </TimelineSeparator>
-            <TimelineContent>
-              <Typography variant="h1">{item.label}</Typography>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
+      <ImageCom data={6} />
       {/* </Grid> */}
     </Grid>
   );

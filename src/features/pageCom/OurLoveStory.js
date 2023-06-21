@@ -7,6 +7,7 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import ImageCom from "./ImageCom";
 
 const timelineData = [
   { time: "09:30 am", label: "Childhood" },
@@ -25,29 +26,45 @@ export default function OurLoveStory() {
       alignItems="center"
       style={{ minHeight: "100vh" }}
     >
-      <Grid item xs={12} align="center">
-        <Typography variant="h1" component="h2">
+      <Grid
+        item
+        // xs={12}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+        align="center"
+        style={{ minHeight: "100vh" }}
+      >
+        <Typography
+          variant="h1"
+          component="h2"
+          align="center"
+          sx={{ paddingBottom: "6vh",paddingTop:"20vh" }}
+        >
           OUR LOVE STORY
         </Typography>
+
+        {/* <Grid item> */}
+        <Timeline position="alternate" >
+          {timelineData.map((item, index) => (
+            <TimelineItem key={index}>
+              <TimelineOppositeContent color="text.secondary">
+                {item.time}
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot />
+                {index !== timelineData.length - 1 && <TimelineConnector />}
+              </TimelineSeparator>
+              <TimelineContent>
+                <Typography variant="h1">{item.label}</Typography>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
       </Grid>
-      {/* <Grid item> */}
-      <Timeline position="alternate">
-        {timelineData.map((item, index) => (
-          <TimelineItem key={index}>
-            <TimelineOppositeContent color="text.secondary">
-              {item.time}
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot />
-              {index !== timelineData.length - 1 && <TimelineConnector />}
-            </TimelineSeparator>
-            <TimelineContent>
-              <Typography variant="h1">{item.label}</Typography>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-      {/* </Grid> */}
+      <ImageCom data={4} />
     </Grid>
   );
 }

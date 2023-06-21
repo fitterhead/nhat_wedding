@@ -6,6 +6,7 @@ import RsvpModal from "../../components/utils/RsvpModal";
 import { GOOGLE_DRIVE_API, GOOGLE_FOLDER_ID } from "../../app/config";
 import { useDispatch, useSelector } from "react-redux";
 import { getImageList } from "./contentSlice";
+import ImageCom from "./ImageCom";
 
 function Invitation() {
   const [showTypo1, setShowTypo1] = useState(false);
@@ -40,9 +41,9 @@ function Invitation() {
     };
   }, []);
 
-  useEffect(() => {
-    dispatch(getImageList());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getImageList());
+  // }, [dispatch]);
   /* ---------------------------------- modal --------------------------------- */
 
   const [open, setOpen] = useState(false);
@@ -57,9 +58,7 @@ function Invitation() {
 
   let random = null;
   /* ---------------------------- get random value ---------------------------- */
-  const getRandomValuesFromArray = (array) => {
-    return array[Math.floor(Math.random() * array.length)];
-  };
+  const key = 1;
 
   return (
     <Grid
@@ -68,18 +67,17 @@ function Invitation() {
       alignItems="center"
       style={{ minHeight: "100vh" }}
     >
-      <Grid item align="center">
+      <Grid
+        item
+        align="center"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+        style={{ minHeight: "100vh" }}
+      >
         {/* <img src={fileUrl} alt="Google Drive " /> */}
-        <Button
-          onClick={() =>
-            console.log(
-              getRandomValuesFromArray(imageList),
-              "getRandomValuesFromArray(imageList)"
-            )
-          }
-        >
-          test
-        </Button>
 
         <Typography
           variant="h1"
@@ -129,31 +127,38 @@ function Invitation() {
           <br /> <Typography variant="letter2">T</Typography>rần Xuân Soạn st,
           Tân Hưng ward, District 7, Hồ Chí Minh city
         </Typography>
-        {/* <Button onClick={handleOpen} variant="contained">
-          <Typography variant="h1" component="h2" align="center">
-            Map
-          </Typography>
-        </Button> */}
-        <Button onClick={handleOpen} variant="outlined">
-          <Typography
-            sx={{ fontSize: "12px" }}
-            variant="h1"
-            component="h2"
-            align="center"
+
+        <Typography>
+          <Button
+            onClick={handleOpen}
+            sx={{ maxWidth: "50%" }}
+            variant="outlined"
           >
-            Click here to RSVP
-          </Typography>
-        </Button>
+            <Typography
+              sx={{ fontSize: "12px" }}
+              variant="h1"
+              component="h1"
+              align="center"
+            >
+              Click here to RSVP
+            </Typography>
+          </Button>
+        </Typography>
+
         <RsvpModal open={open} onClose={handleClose} />
       </Grid>
 
-      <Grid item container style={{ height: "80vh" }}>
-        {randomList?.map((item) => (
+      {/* <Grid
+        item
+        container
+        // style={{ height: "80vh" }}
+      >
+        {randomList?.slice(0, 2).map((item) => (
           <Grid item md={6} xs={12}>
             <Box
               sx={{
-                maxWidth: "500px",
-                maxHeight: "500px",
+                // maxWidth: "500px",
+                // maxHeight: "500px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -162,12 +167,17 @@ function Invitation() {
               <img
                 src={item}
                 alt="I 1"
-                style={{ maxWidth: "50%", maxHeight: "50%" }}
+                style={{
+                  maxWidth: "50%",
+                  maxHeight: "50%",
+                }}
               />
             </Box>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
+
+      <ImageCom data={0} />
     </Grid>
   );
 }

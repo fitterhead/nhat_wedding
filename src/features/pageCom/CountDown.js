@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Grid, Typography } from "@mui/material";
+import ImageCom from "./ImageCom";
 function CountDown() {
   const getRemainingTime = () => {
     const currentTime = new Date().getTime();
@@ -39,7 +40,13 @@ function CountDown() {
       alignItems="center"
       style={{ minHeight: "100vh" }}
     >
-      <Grid item container justifyContent="center" alignItems="center">
+      <Grid
+        item
+        container
+        justifyContent="center"
+        alignItems="center"
+        style={{ minHeight: "100vh" }}
+      >
         <Grid item xs={12} align="center">
           <Typography
             variant="h1"
@@ -64,17 +71,21 @@ function CountDown() {
             gutterBottom
             sx={{ paddingBottom: "5vh" }}
           >
-            {remainingTime.days} days,{remainingTime.hours} hours,<br />
-            {remainingTime.minutes} minutes,<br />
+            {remainingTime.days} days,{remainingTime.hours} hours,
+            <br />
+            {remainingTime.minutes} minutes,
+            <br />
             {remainingTime.seconds} seconds
           </Typography>
         </Grid>
         <Grid item xs={12} align="center">
           <Typography variant="body1" component="h2" gutterBottom>
-          <Typography variant="letter2">U</Typography>ntil we officially become husband and wife
+            <Typography variant="letter2">U</Typography>ntil we officially
+            become husband and wife
           </Typography>
         </Grid>
       </Grid>
+      <ImageCom data={2} />
     </Grid>
   );
 }
