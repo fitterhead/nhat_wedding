@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Grid, Typography, Box } from "@mui/material";
 import Divider from "@mui/material/Divider";
+import ImageCom from "./ImageCom";
 function DressCode() {
   const colors = ["red", "green", "blue", "yellow", "purple", "orange"];
   const Circle = ({ color }) => (
@@ -27,13 +28,14 @@ function DressCode() {
         alignItems="center"
         sx={12}
         spacing={2}
+        style={{ minHeight: "100vh" }}
       >
         <Grid item xl={12} md={12} xs={12} align="center">
           <Typography
             variant="h1"
             component="h2"
             align="center"
-            gutterBottom
+            // gutterBottom
             sx={{ paddingBottom: "5vh" }}
           >
             DRESS CODE
@@ -69,11 +71,11 @@ function DressCode() {
             variant="body1"
             component="h2"
             align="center"
-            gutterBottom
-            sx={{ paddingBottom: "10vh" }}
+            // gutterBottom
+            // sx={{ paddingBottom: "5vh" }}
           >
-            <Typography variant="letter2">W</Typography>e kindly request our guests to wear these colors for our special
-            day.
+            <Typography variant="letter2">W</Typography>e kindly request our
+            guests to wear these colors for our special day.
           </Typography>
         </Grid>
         <Grid item xl={6} xs={6} align="center">
@@ -81,7 +83,8 @@ function DressCode() {
             MEN
           </Typography>
           <Typography variant="body1" align="center" gutterBottom>
-          <Typography variant="letter2">S</Typography>uit or a tuxedo with a dress shirt,
+            <Typography variant="letter2">S</Typography>uit or a tuxedo with a
+            dress shirt,
           </Typography>
         </Grid>
         {/* <Divider orientation="vertical" flexItem /> */}
@@ -90,10 +93,12 @@ function DressCode() {
             WOMAN
           </Typography>
           <Typography variant="body1" align="center" gutterBottom>
-          <Typography variant="letter2">L</Typography>ong gown or a cocktail dress.
+            <Typography variant="letter2">L</Typography>ong gown or a cocktail
+            dress.
           </Typography>
         </Grid>
       </Grid>
+      <ImageCom data={8} />
     </Grid>
   );
 }
