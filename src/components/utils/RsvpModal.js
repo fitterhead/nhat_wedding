@@ -33,9 +33,9 @@ function RsvpModal({ open, onClose }) {
       <Box sx={style}>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSegjJuyOPn-iroOTshqxF5FtKULd8j8dzn_rNw_zWIx4YWfZg/viewform?embedded=true"
-          width="100%"
+          width="600"
           title="Form"
-          height="100%"
+          height="600"
           // frameborder="0"
           // marginheight="0"
           // marginwidth="0"
