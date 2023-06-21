@@ -68,7 +68,7 @@ function Invitation() {
           gutterBottom
           sx={{ paddingBottom: "6vh" }}
         >
-          Save the date:
+          <Typography variant="letter2">S</Typography>ave the date:
         </Typography>
         <Typography
           className={`typo3 ${showTypo3 ? "show" : ""}`}
@@ -94,16 +94,16 @@ function Invitation() {
           nvite you to celebrate their wedding on
           <br />
           <Typography variant="h2">17:00 Saturday 23.09.2023</Typography>
-          Maison De Charme - Restaurant & Events
-          <br /> Trần Xuân Soạn st, Tân Hưng ward, District 7, Hồ Chí Minh city
+          <Typography variant="letter2">M</Typography>aison De Charme - Restaurant & Events
+          <br /> <Typography variant="letter2">T</Typography>rần Xuân Soạn st, Tân Hưng ward, District 7, Hồ Chí Minh city
         </Typography>
-        <Button onClick={handleOpen} variant="contained">
+        {/* <Button onClick={handleOpen} variant="contained">
           <Typography variant="h1" component="h2" align="center">
             Map
           </Typography>
-        </Button>
-        <Button onClick={handleOpen} variant="contained">
-          <Typography variant="h1" component="h2" align="center">
+        </Button> */}
+        <Button onClick={handleOpen} variant="outlined">
+          <Typography sx={{fontSize:"12px"}} variant="h1" component="h2" align="center">
             Click here to RSVP
           </Typography>
         </Button>

@@ -14,12 +14,14 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  // width: 400,
+  width: "60vw",
+  height: "60vh",
   bgcolor: "white",
   borderRadius: "10px",
   boxShadow: 24,
   p: 4,
   textAlign: "center", // Align text to center
+  "@media screen and (max-width: 600px)": { width: "90vw",height: "90vh" },
 };
 
 function RsvpModal({ open, onClose }) {
@@ -33,9 +35,9 @@ function RsvpModal({ open, onClose }) {
       <Box sx={style}>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSegjJuyOPn-iroOTshqxF5FtKULd8j8dzn_rNw_zWIx4YWfZg/viewform?embedded=true"
-          width="600"
+          width="100%"
           title="Form"
-          height="600"
+          height="100%"
           // frameborder="0"
           // marginheight="0"
           // marginwidth="0"

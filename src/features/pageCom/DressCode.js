@@ -46,7 +46,7 @@ function DressCode() {
             gutterBottom
             sx={{ paddingBottom: "5vh" }}
           >
-            Dress code color palette
+            <Typography variant="letter2">D</Typography>ress code color palette
           </Typography>
 
           <Grid
@@ -72,25 +72,25 @@ function DressCode() {
             gutterBottom
             sx={{ paddingBottom: "10vh" }}
           >
-            We kindly request our guests to wear these colors for our special
+            <Typography variant="letter2">W</Typography>e kindly request our guests to wear these colors for our special
             day.
           </Typography>
         </Grid>
         <Grid item xl={6} xs={6} align="center">
           <Typography variant="h1" align="center" gutterBottom>
-            Men
+            MEN
           </Typography>
           <Typography variant="body1" align="center" gutterBottom>
-            Suit or a tuxedo with a dress shirt,
+          <Typography variant="letter2">S</Typography>uit or a tuxedo with a dress shirt,
           </Typography>
         </Grid>
         {/* <Divider orientation="vertical" flexItem /> */}
         <Grid item xl={6} xs={6} align="center">
           <Typography variant="h1" align="center" gutterBottom>
-            Woman
+            WOMAN
           </Typography>
           <Typography variant="body1" align="center" gutterBottom>
-            Long gown or a cocktail dress.
+          <Typography variant="letter2">L</Typography>ong gown or a cocktail dress.
           </Typography>
         </Grid>
       </Grid>

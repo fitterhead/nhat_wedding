@@ -204,7 +204,7 @@ function ThemeProvider({ children }) {
       secondary: SECONDARY,
       background: {
         default: "#fafafa",
-        paper: "../public/white-paper-texture.jpg",
+        // paper: "../public/white-paper-texture.jpg",
       },
     },
     typography: TYPOGRAPHY,

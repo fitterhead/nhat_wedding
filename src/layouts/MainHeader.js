@@ -23,40 +23,50 @@ const pages = [
   "memory",
   "RSVP",
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function MainHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
   };
 
-  const handleCloseNavMenu = (page) => {
+  const handlePage = (page) => {
+    console.log(page, "page");
+
     scroller.scrollTo(page.toLowerCase(), {
       duration: 500,
       smooth: true,
       offset: -50, // Adjust the offset as needed to align the component
     });
+
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      style={{ background: "transparent", boxShadow: "none" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography sx={{ padding: 2 }} variant="h1">
-            Nhat & Goda
+          <Typography sx={{ padding: 2, fontSize: "21px" }} variant="body1">
+            <Typography sx={{ fontSize: "26px" }} variant="letter2">
+              N
+            </Typography>
+            hat & <Typography sx={{ fontSize: "26px" }}   variant="letter2">G</Typography>oda
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -86,51 +96,30 @@ function MainHeader() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
+                <MenuItem key={page} onClick={() => handlePage(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={() => handleCloseNavMenu(page)}
-                sx={{ my: 2, color: "white", display: "block" }}
+                onClick={() => handlePage(page)}
+                sx={{ my: 2, color: "black", display: "block" }}
               >
-                {page}
+                <Typography sx={{ fontSize: "14px" }} variant="body1">
+                  {page}
+                </Typography>
               </Button>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

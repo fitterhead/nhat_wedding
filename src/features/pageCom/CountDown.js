@@ -71,7 +71,7 @@ function CountDown() {
         </Grid>
         <Grid item xs={12} align="center">
           <Typography variant="body1" component="h2" gutterBottom>
-            until we officially become husband and wife
+          <Typography variant="letter2">U</Typography>ntil we officially become husband and wife
           </Typography>
         </Grid>
       </Grid>
