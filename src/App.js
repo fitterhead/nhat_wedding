@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider>
-        <div className="background-paper">
+        <div className="background-color">
           <Router />
         </div>
       </ThemeProvider>

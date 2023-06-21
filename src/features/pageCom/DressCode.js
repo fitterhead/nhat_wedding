@@ -29,12 +29,23 @@ function DressCode() {
         spacing={2}
       >
         <Grid item xl={12} md={12} xs={12} align="center">
-          <Typography variant="h7" component="h2" align="center" gutterBottom sx={{ paddingBottom: "10vh" }}>
+          <Typography
+            variant="h1"
+            component="h2"
+            align="center"
+            gutterBottom
+            sx={{ paddingBottom: "5vh" }}
+          >
             DRESS CODE
           </Typography>
         </Grid>
         <Grid item xl={12} md={12} xs={12} align="center">
-          <Typography variant="h1" align="center" gutterBottom>
+          <Typography
+            variant="body1"
+            align="center"
+            gutterBottom
+            sx={{ paddingBottom: "5vh" }}
+          >
             Dress code color palette
           </Typography>
 
@@ -45,6 +56,7 @@ function DressCode() {
             alignItems="center"
             xl={12}
             spacing={2}
+            sx={{ paddingBottom: "7vh" }}
             gt
           >
             {colors.map((color, index) => (
@@ -53,7 +65,13 @@ function DressCode() {
               </Grid>
             ))}
           </Grid>
-          <Typography variant="body2" component="h2" align="center" gutterBottom sx={{ paddingBottom: "10vh" }}>
+          <Typography
+            variant="body1"
+            component="h2"
+            align="center"
+            gutterBottom
+            sx={{ paddingBottom: "10vh" }}
+          >
             We kindly request our guests to wear these colors for our special
             day.
           </Typography>
@@ -62,7 +80,7 @@ function DressCode() {
           <Typography variant="h1" align="center" gutterBottom>
             Men
           </Typography>
-          <Typography variant="body2" align="center" gutterBottom>
+          <Typography variant="body1" align="center" gutterBottom>
             Suit or a tuxedo with a dress shirt,
           </Typography>
         </Grid>
@@ -71,7 +89,7 @@ function DressCode() {
           <Typography variant="h1" align="center" gutterBottom>
             Woman
           </Typography>
-          <Typography variant="body2" align="center" gutterBottom>
+          <Typography variant="body1" align="center" gutterBottom>
             Long gown or a cocktail dress.
           </Typography>
         </Grid>

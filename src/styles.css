@@ -1,7 +1,32 @@
-.background-paper {
+/* .background-paper {
   background-image: url("../public/white-paper-texture.jpg");
+  background-color: #FEFAE0;
   background-repeat: repeat;
   background-size: 100%;
   background-position: center;
   opacity: 0.5;
+} */
+.background-color {
+  background-color: #fefae0;
+}
+
+@font-face {
+  font-family: "Cormorant-LightItalic";
+  src: url("font/CormorantGaramond-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cormorant-Italic";
+  src: url("font/CormorantGaramond-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Vivaldi";
+  src: url("font/Vivaldi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cormorant-Regular";
+  src: url("font/CormorantGaramond-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvetica-Neue";
+  src: url("font/HelveticaNeueCyr-Roman.ttf") format("truetype");
 }

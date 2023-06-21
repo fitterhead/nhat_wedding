@@ -26,7 +26,7 @@ export default function OurLoveStory() {
       style={{ minHeight: "100vh" }}
     >
       <Grid item xs={12} align="center">
-        <Typography variant="h7" component="h2">
+        <Typography variant="h1" component="h2">
           OUR LOVE STORY
         </Typography>
       </Grid>

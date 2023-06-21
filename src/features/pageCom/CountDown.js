@@ -41,7 +41,12 @@ function CountDown() {
     >
       <Grid item container justifyContent="center" alignItems="center">
         <Grid item xs={12} align="center">
-          <Typography variant="h7" component="h2" gutterBottom sx={{ paddingBottom: "10vh" }}>
+          <Typography
+            variant="h1"
+            component="h2"
+            gutterBottom
+            sx={{ paddingBottom: "10vh" }}
+          >
             WEDDING COUNTDOWN
           </Typography>
         </Grid>
@@ -53,14 +58,19 @@ function CountDown() {
           xs={12}
           align="center"
         >
-          <Typography variant="h1" component="h2" gutterBottom sx={{ paddingBottom: "10vh" }}>
-            {remainingTime.days}days: {remainingTime.hours} hours:
-            {remainingTime.minutes}minutes:
-            {remainingTime.seconds}seconds
+          <Typography
+            variant="display2"
+            component="h2"
+            gutterBottom
+            sx={{ paddingBottom: "5vh" }}
+          >
+            {remainingTime.days} days,{remainingTime.hours} hours,<br />
+            {remainingTime.minutes} minutes,<br />
+            {remainingTime.seconds} seconds
           </Typography>
         </Grid>
         <Grid item xs={12} align="center">
-          <Typography variant="body3" component="h2" gutterBottom>
+          <Typography variant="body1" component="h2" gutterBottom>
             until we officially become husband and wife
           </Typography>
         </Grid>

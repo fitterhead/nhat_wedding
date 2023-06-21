@@ -24,7 +24,7 @@ export default function TimeLine() {
       style={{ minHeight: "100vh" }}
     >
       <Grid item xs={12} align="center">
-        <Typography variant="h7" component="h2">
+        <Typography variant="h1" component="h2">
           WEDDING TIMELINE
         </Typography>
       </Grid>

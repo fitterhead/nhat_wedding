@@ -53,7 +53,7 @@ function MainHeader() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography sx={{ padding: 2 }} variant="h7">
+          <Typography sx={{ padding: 2 }} variant="h1">
             Nhat & Goda
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

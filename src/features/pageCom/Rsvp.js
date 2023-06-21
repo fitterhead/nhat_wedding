@@ -10,7 +10,7 @@ function Rsvp() {
     >
       <Grid item align="center">
         <Typography
-          variant="h7"
+          variant="h1"
           component="h2"
           align="center"
           gutterBottom
