@@ -61,7 +61,12 @@ function Invitation() {
         >
           <Typography variant="script4">G</Typography>
           oda Yusaku
-        <Typography sx={{paddingLeft:"0.7em",color:"white"}} variant="script3">&</Typography>
+          <Typography
+            sx={{ paddingLeft: "0.7em", color: "white" }}
+            variant="script3"
+          >
+            &
+          </Typography>
         </Typography>
         <Typography
           variant="script1"
@@ -109,11 +114,16 @@ function Invitation() {
             border: "1px solid #DFBB9D",
           }}
         >
-          <Typography variant="body1" align="center">
+          <Typography
+            onClick={() => handleOpen()}
+            variant="body1"
+            align="center"
+          >
             CLICK HERE TO RSVP
           </Typography>
         </Card>
       </Grid>
+      <RsvpModal open={open} onClose={handleClose} />
     </Grid>
   );
 }
