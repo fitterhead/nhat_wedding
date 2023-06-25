@@ -1,20 +1,64 @@
 import * as React from "react";
-import { Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import ImageCom from "./ImageCom";
+import { styled } from "@mui/system";
 
 const timelineData = [
-  { time: "17:00 pm", label: "Welcome photos" },
-  { time: "18:00 pm", label: "Ceremony" },
-  { time: "18:30 pm", label: "Dinner" },
-  { time: "19:30 pm", label: "Dancing, Karaoke" },
+  {
+    time: "17:00",
+    event: "Photo",
+    info: "Welcoming photos",
+    image: "photo",
+  },
+  {
+    time: "18:00",
+    event: "Toast",
+    info: "The ceremony",
+    image: "toast",
+  },
+  {
+    time: "18:30",
+    event: "We do",
+    info: "Speeches and dinner",
+    image: "wedo",
+  },
+  {
+    time: "19:30",
+    event: "We Party",
+    info: "Dance time!",
+    image: "party",
+  },
+  {
+    time: "20:00",
+    event: "Bouquet Toss",
+    info: "To our next lucky girl",
+    image: "toss",
+  },
 ];
+
+const TimelineImage = ({ image }) => (
+  <img src={image} alt="Timeline" style={{ width: "100%", height: "auto" }} />
+);
+
+const StyledTimelineItem = styled(TimelineItem)(({ theme }) => ({
+  "&.MuiTimelineItem-root::before": {
+    flex: 0,
+    padding: 0,
+  },
+}));
 
 export default function TimeLine() {
   return (
@@ -22,39 +66,85 @@ export default function TimeLine() {
       container
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "100vh" }}
+      style={{
+        minHeight: "100vh",
+        padding: "0rem",
+        backgroundColor: "#F1DEC9",
+      }}
     >
       <Grid
         item
         xs={12}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
         align="center"
         style={{ minHeight: "100vh" }}
-        sx={{ paddingBottom: "6vh", paddingTop: "20vh" }}
       >
-        <Typography variant="h1" component="h2">
-          WEDDING TIMELINE
+        <Typography
+          variant="h2"
+          component="h2"
+          align="center"
+          sx={{ paddingTop: "10vh" }}
+        >
+          BEST DAY
+        </Typography>
+        <CardMedia
+          component="img"
+          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
+          image={"/header1.png"}
+          // alt={item.imageAlt}
+        />
+        <Typography
+          variant="h1"
+          component="h2"
+          align="center"
+          sx={{ paddingTop: "10vh", paddingBottom: "5vh" }}
+        >
+          WEDDING <br />
+          TIMELINE
         </Typography>
 
-        {/* <Grid item> */}
-        <Timeline position="alternate">
+        <Timeline sx={{ paddingBottom: "10vh" }} position="alternate">
           {timelineData.map((item, index) => (
-            <TimelineItem key={index}>
-              <TimelineOppositeContent color="text.secondary">
-                {item.time}
-              </TimelineOppositeContent>
+            <TimelineItem>
               <TimelineSeparator>
-                <TimelineDot />
-                {index !== timelineData.length - 1 && <TimelineConnector />}
+                <TimelineConnector sx={{ backgroundColor: "#DFBB9D" }} />
               </TimelineSeparator>
               <TimelineContent>
-                <Typography variant="h1">{item.label}</Typography>
+                <Grid container alignItems="center" spacing={2}>
+                  <Grid item xs={12} md={6}>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-evenly",
+                      }}
+                    >
+                      <Typography variant="script3" align="center">
+                        {item.event}
+                      </Typography>
+
+                      <CardMedia
+                        component="img"
+                        sx={{ width: 60, height: "auto", objectFit: "cover" }}
+                        image={`/${item.image}.png`}
+                        // alt={item.imageAlt}
+                      />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Typography variant="h3">{item.time}</Typography>
+                    <Typography variant="body1">{item.info}</Typography>
+                  </Grid>
+                </Grid>
               </TimelineContent>
             </TimelineItem>
           ))}
         </Timeline>
       </Grid>
-      <ImageCom data={6} />
-      {/* </Grid> */}
     </Grid>
   );
 }

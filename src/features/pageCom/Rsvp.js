@@ -1,41 +1,59 @@
 import React from "react";
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Button, CardMedia, Container, Grid, Typography } from "@mui/material";
 function Rsvp() {
   return (
     <Grid
       container
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "100vh" }}
+      style={{
+        // minHeight: "100vh",
+        padding: "0rem",
+        backgroundColor: "#F1DEC9",
+      }}
     >
-      <Grid item align="center">
+      <Grid
+        item
+        xs={12}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          paddingTop: "10vh",
+        }}
+        align="center"
+        // style={{ minHeight: "100vh" }}
+      >
+        <CardMedia
+          component="img"
+          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
+          image={"/header2.png"}
+          // alt={item.imageAlt}
+        />
         <Typography
-          variant="h1"
+          variant="body1"
           component="h2"
           align="center"
-          gutterBottom
-          sx={{ paddingBottom: "10vh" }}
+          sx={{ paddingTop: "5vh" }}
         >
-          KINDLY RESPOND
+          YES! I WOULDN’T MISSED IT
         </Typography>
-
         <Typography
-          variant="h1"
+          variant="body1"
           component="h2"
           align="center"
-          gutterBottom
-          sx={{ paddingBottom: "10vh" }}
+          sx={{ paddingBottom: "5vh" }}
         >
-          YES! WOULDN’T MISS IT <br />
           NO, SADLY DECLINES
-          <br /> I promise to dance/sing if you play:
         </Typography>
-
-        <Button variant="contained">
-          <Typography variant="h1" component="h2" align="center" gutterBottom>
-            QR DONATE CODE
-          </Typography>
-        </Button>
+        <Typography
+          variant="script3"
+          component="h2"
+          align="center"
+          sx={{ paddingBottom: "10vh" }}
+        >
+          I promise to dance/sing if you play:
+        </Typography>
       </Grid>
     </Grid>
   );

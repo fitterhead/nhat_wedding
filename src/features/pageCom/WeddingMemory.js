@@ -44,12 +44,12 @@ const WeddingMemory = () => {
       container
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "100vh" }}
+      style={{ minHeight: "100vh",padding:"0vh 1vh 0vh 1vh" }}
       spacing={2}
     >
       <Grid item md={6} xs={12}>
-        <Typography variant="h1" align="center" gutterBottom>
-          Pre-wedding photos
+        <Typography variant="h2" align="center" gutterBottom>
+          PRE-WEDDING PHOTOS
         </Typography>
         <StyledImageList variant="quilted" cols={4} rowHeight={121}>
           {imageData.slice(0, 12).map((item) => (
@@ -68,8 +68,8 @@ const WeddingMemory = () => {
         </StyledImageList>
       </Grid>
       <Grid item md={6} xs={12}>
-        <Typography variant="h1" align="center" gutterBottom>
-          Ceremony photos
+        <Typography variant="h2" align="center" gutterBottom>
+          CEREMONY PHOTOS
         </Typography>
         <StyledImageList variant="quilted" cols={4} rowHeight={121}>
           {imageData.slice(12, 24).map((item) => (

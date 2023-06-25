@@ -11,7 +11,10 @@ import Rsvp from "../features/pageCom/Rsvp";
 
 function HomePage() {
   return (
-    <Container maxWidth="xl">
+    <Container 
+    maxWidth="xl"
+    sx={{padding:"0rem"}}
+    >
       <Element name="invitation" className="element">
         <Invitation />
       </Element>

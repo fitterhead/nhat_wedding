@@ -54,12 +54,10 @@ function MainHeader() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography sx={{ padding: 2, fontSize: "21px" }} variant="body1">
-            <Typography sx={{ fontSize: "26px" }} variant="letter2">
-              N
-            </Typography>
-            hat & <Typography sx={{ fontSize: "26px" }}   variant="letter2">G</Typography>oda
-          </Typography>
+          <Typography
+            sx={{  fontSize: "16px" }}
+            variant="script3"
+          >Yusaku & Minh Nhat</Typography>
           <Box
             sx={{
               flexGrow: 1,

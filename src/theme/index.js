@@ -21,9 +21,10 @@ const COMPONENTS = {
 };
 
 const PRIMARY = {
-  main: "#CB904D",
-  dark: "#93EA71",
-  light: "#C9F4B8",
+  main: "#826F66",
+  dark: "#563635",
+  light: "#F1DEC9",
+  line: "#DFBB9D",
 };
 const SECONDARY = {
   main: "#ED315D",
@@ -31,62 +32,63 @@ const SECONDARY = {
   light: "#FAC7D3",
 };
 
-const TYPOGRAPHY = {
-  display1: {
-    fontFamily: "Cormorant-Italic",
-    fontWeight: 500,
-    fontSize: "50px",
-    lineHeight: "80%",
-    letterSpacing: "-5",
-  },
+// const TYPOGRAPHY = {
+//   display1: {
+//     fontFamily: "Cormorant-Italic",
+//     fontWeight: 500,
+//     fontSize: "50px",
+//     lineHeight: "80%",
+//     letterSpacing: "-5",
+//     color: "#563635",
+//   },
 
-  display2: {
-    fontFamily: "Cormorant-LightItalic",
-    fontWeight: 500,
-    fontSize: "50px",
-    lineHeight: "100%",
-    letterSpacing: "-5",
-  },
+//   display2: {
+//     fontFamily: "Cormorant-LightItalic",
+//     fontWeight: 500,
+//     fontSize: "50px",
+//     lineHeight: "100%",
+//     letterSpacing: "-5",
+//   },
 
-  letter: {
-    fontFamily: "Vivaldi",
-    fontStyle: "regular",
+//   letter: {
+//     fontFamily: "Vivaldi",
+//     fontStyle: "regular",
 
-    fontWeight: 200,
-    fontSize: "55px",
-    lineHeight: "80%",
-    letterSpacing: "-5",
-  },
+//     fontWeight: 200,
+//     fontSize: "55px",
+//     lineHeight: "80%",
+//     letterSpacing: "-5",
+//   },
 
-  letter2: {
-    fontFamily: "Vivaldi",
-    fontStyle: "regular",
+//   letter2: {
+//     fontFamily: "Vivaldi",
+//     fontStyle: "regular",
 
-    fontWeight: 400,
-    fontSize: "20px",
-    lineHeight: "80%",
-    letterSpacing: "-5",
-  },
-  h1: {
-    fontFamily: "Helvetica-Neue",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "120%",
-  },
-  h2: {
-    fontFamily: "Cormorant-Regular",
-    fontWeight: 600,
-    fontSize: "16px",
-    lineHeight: "120%",
-  },
+//     fontWeight: 400,
+//     fontSize: "20px",
+//     lineHeight: "80%",
+//     letterSpacing: "-5",
+//   },
+//   h1: {
+//     fontFamily: "Helvetica-Neue",
+//     fontWeight: 500,
+//     fontSize: "16px",
+//     lineHeight: "120%",
+//   },
+//   h2: {
+//     fontFamily: "Cormorant-Regular",
+//     fontWeight: 600,
+//     fontSize: "16px",
+//     lineHeight: "120%",
+//   },
 
-  body1: {
-    fontFamily: "Cormorant-Regular",
-    fontWeight: 550,
-    fontSize: "16px",
-    lineHeight: "120%",
-  },
-};
+//   body1: {
+//     fontFamily: "Cormorant-Regular",
+//     fontWeight: 550,
+//     fontSize: "16px",
+//     lineHeight: "120%",
+//   },
+// };
 
 // const TYPOGRAPHY = {
 //   body1: {
@@ -195,6 +197,93 @@ const TYPOGRAPHY = {
 //     // letterSpacing:
 //   },
 // };
+
+const TYPOGRAPHY = {
+  script1: {
+    fontFamily: "Delafield",
+    fontWeight: 400,
+    fontSize: "55px",
+    lineHeight: "120%",
+    letterSpacing: "-5",
+    color: "#F5F5F5",
+  },
+  script2: {
+    fontFamily: "Hello",
+    fontWeight: 400,
+    fontSize: "50px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  script3: {
+    fontFamily: "Hello",
+    fontWeight: 400,
+    fontSize: "22px",
+    color: "#563635",
+  },
+  script4: {
+    fontFamily: "Birthstone",
+    fontWeight: 400,
+    fontSize: "55px",
+    color: "#F5F5F5",
+  },
+  script5: {
+    fontFamily: "Melinda",
+    fontWeight: 400,
+    fontSize: "60px",
+    color: "#F5F5F5",
+  },
+
+  h1: {
+    fontFamily: "Crimson-R",
+    fontWeight: 400,
+    fontSize: "36px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  h2: {
+    fontFamily: "Crimson-R",
+    fontWeight: 400,
+    fontSize: "25px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  h3: {
+    fontFamily: "Crimson-B",
+    fontWeight: 400,
+    fontSize: "16px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  h4: {
+    fontFamily: "Crimson-B",
+    fontWeight: 400,
+    fontSize: "13px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  h5: {
+    fontFamily: "Crimson-R",
+    fontWeight: 400,
+    fontSize: "13px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  body1: {
+    fontFamily: "Crimson-R",
+
+    fontWeight: 400,
+    fontSize: "16px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+  body2: {
+    fontFamily: "Crimson-I",
+    fontWeight: 400,
+    fontSize: "16px",
+    letterSpacing: "-5",
+    color: "#563635",
+  },
+};
 
 function ThemeProvider({ children }) {
   const theme = {

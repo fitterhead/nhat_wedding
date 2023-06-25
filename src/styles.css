@@ -12,7 +12,7 @@
 
 .background-paper {
   background-image: url("../public/paper-texture.jpg");
-  background-color: #FEFAE0;
+  background-color: #fefae0;
   background-repeat: repeat;
   background-size: 100%;
   /* background-size: cover; */
@@ -39,4 +39,47 @@
 @font-face {
   font-family: "Helvetica-Neue";
   src: url("font/HelveticaNeueCyr-Roman.ttf") format("truetype");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 new typeset                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------- subhead1 -------------------------------- */
+@font-face {
+  font-family: "Crimson-R";
+  src: url("font/CrimsonText-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Crimson-B";
+  src: url("font/CrimsonText-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Crimson-I";
+  src: url("font/CrimsonText-Italic.ttf") format("truetype");
+}
+
+/* ----------------------------- invitation font ---------------------------- */
+@font-face {
+  font-family: "Delafield";
+  src: url("font/MrsSaintDelafield-Regular.ttf") format("truetype");
+}
+
+/* --------------------------------- script2 -------------------------------- */
+@font-face {
+  font-family: "Hello";
+  src: url("font/Hello.ttf") format("truetype");
+}
+
+/* ------------------------------- big letters ------------------------------ */
+
+@font-face {
+  font-family: "Birthstone";
+  src: url("font/BirthstoneBounce-Regular.ttf") format("truetype");
+}
+
+/* ----------------------------------- and ---------------------------------- */
+
+@font-face {
+  font-family: "Melinda";
+  src: url("font/Melinda-Script.ttf") format("truetype");
 }
