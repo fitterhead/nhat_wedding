@@ -20,7 +20,7 @@ const pages = [
   "OurLoveStory",
   "Timeline",
   "DressCode",
-  "memory",
+  "Memory",
   "RSVP",
 ];
 

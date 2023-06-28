@@ -39,7 +39,7 @@ function CountDown() {
         item
         xs={12}
         style={{
-          height: "40vh",
+          height: "45vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

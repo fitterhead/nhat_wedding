@@ -21,7 +21,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   textAlign: "center", // Align text to center
-  "@media screen and (max-width: 600px)": { width: "90vw",height: "90vh" },
+  "@media screen and (max-width: 600px)": { width: "90vw", height: "90vh" },
 };
 
 function RsvpModal({ open, onClose }) {
@@ -34,7 +34,7 @@ function RsvpModal({ open, onClose }) {
     >
       <Box sx={style}>
         <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSegjJuyOPn-iroOTshqxF5FtKULd8j8dzn_rNw_zWIx4YWfZg/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLScfsJVF7AAB89pUZtvwNk7dQILJ_dEQk51q0P7Z1M4_ARUJSg/viewform?embedded=true"
           width="100%"
           title="Form"
           height="100%"

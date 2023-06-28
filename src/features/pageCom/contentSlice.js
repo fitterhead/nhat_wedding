@@ -7,6 +7,7 @@ import axios from "axios";
 const initialState = {
   isloading: false,
   error: null,
+  imageUrl: [],
   imageList: [],
   randomImageList: [],
 };
@@ -30,6 +31,10 @@ const slice = createSlice({
       state.isLoading = false;
       state.randomImageList = action.payload;
     },
+    getUrlSuccess(state, action) {
+      state.isLoading = false;
+      state.imageUrl = action.payload;
+    },
   },
 });
 
@@ -45,8 +50,10 @@ export const getImageList = () => async (dispatch) => {
 
   try {
     const response = await axios.get(apiUrl);
+
     dispatch(slice.actions.getImageListSuccess(response.data.files));
     dispatch(randomImageList(response.data.files));
+    dispatch(getUrl(response.data.files));
   } catch (error) {
     dispatch(slice.actions.hasError(error.message));
   }
@@ -57,7 +64,7 @@ export const randomImageList = (array) => async (dispatch) => {
   const randomValues = [];
 
   try {
-    while (randomValues.length < 10) {
+    while (randomValues.length < array.length) {
       const randomIndex = Math.floor(Math.random() * array.length);
       const randomValue = array[randomIndex];
       if (!randomValues.includes(randomValue)) {
@@ -67,6 +74,20 @@ export const randomImageList = (array) => async (dispatch) => {
       }
     }
     dispatch(slice.actions.getRandomListSuccess(randomValues));
+  } catch (error) {
+    dispatch(slice.actions.hasError(error.message));
+  }
+};
+
+export const getUrl = (array) => async (dispatch) => {
+  dispatch(slice.actions.startLoading());
+  const imageUrl = [];
+  try {
+    array.map((item) =>
+      imageUrl.push(`https://drive.google.com/uc?id=${item.id}`)
+    );
+
+    dispatch(slice.actions.getUrlSuccess(imageUrl));
   } catch (error) {
     dispatch(slice.actions.hasError(error.message));
   }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Card, Grid, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -35,7 +35,7 @@ const timelineData = [
     time: "02.2020",
     event: "The Proposal",
     where: "Bali, Indonesia",
-    info: "He popped the question and she said:” YES”",
+    info: "He popped the question and she said:",
     image: "4",
   },
   {
@@ -93,9 +93,12 @@ export default function OurLoveStory() {
           Our Love Story
         </Typography>
 
-        <Timeline position="alternate">
+        <Timeline sx={{ paddingBottom: "3rem" }} position="alternate">
           {timelineData.map((item, index) => (
-            <TimelineItem sx={{ paddingBottom: "1rem" }} key={index}>
+            <TimelineItem
+              //  sx={{ paddingBottom: "1rem" }}
+              key={index}
+            >
               <TimelineOppositeContent>
                 <Typography gutterBottom variant="h2">
                   {item.time}
@@ -103,23 +106,33 @@ export default function OurLoveStory() {
                 <Typography variant="h3">{item.event}</Typography>
                 <Typography
                   gutterBottom
-                  paddingBottom={"0.5rem"}
+                  // paddingBottom={"0.5rem"}
                   variant="body2"
                 >
                   {item.where}
                 </Typography>
-                <Typography variant="body1">{item.info}</Typography>
+                <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                  {item.info}
+                </Typography>
+
+                {index === 3 && (
+                  <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                    "YES"
+                  </Typography>
+                )}
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineDot />
-                {index !== timelineData.length - 1 && <TimelineConnector />}
+                {index !== timelineData.length && <TimelineConnector />}
               </TimelineSeparator>
               <TimelineContent
                 sx={{
+                  // height:"80%",
                   display: "flex",
                   justifyContent: "center",
                   alignContent: "center",
                   alignItems: "center",
+                  paddingTop: "50px",
                 }}
               >
                 <TimelineImage image={`/${item.image}.jpg`} />
@@ -132,12 +145,11 @@ export default function OurLoveStory() {
         item
         xs={12}
         style={{
-          height: "40vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
           backgroundColor: "transparent",
+          paddingBottom: "5rem",
         }}
       >
         <Typography variant="h1" align="center" sx={{ paddingBottom: "3vh" }}>
@@ -146,15 +158,14 @@ export default function OurLoveStory() {
           MOMENTS
         </Typography>
         <Card>
-          <iframe
-            width="100%"
-            height="auto"
-            src="https://www.youtube.com/embed/u1hVAhIVa-4"
-            title="YouTube video player"
-            frameborder=""
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <CardMedia
+            component="iframe"
+            title="Embedded Video"
+            src="https://drive.google.com/file/d/1E42tn0dB5W4-2R271GXV54Hhl4UbjSto/preview"
+            height="400"
+            width="auto"
+            allow="autoplay"
+          />
         </Card>
       </Grid>
     </Grid>

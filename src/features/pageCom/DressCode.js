@@ -4,14 +4,14 @@ import Divider from "@mui/material/Divider";
 import ImageCom from "./ImageCom";
 function DressCode() {
   const colors = [
-    "red",
-    "green",
-    "blue",
-    "yellow",
-    "purple",
-    "orange",
-    "orange",
-    "orange",
+    "#F19176",
+    "#000000",
+    "#8D8E65",
+    "#BF4A33",
+    "#BD6A44",
+    "#9ABCB3",
+    "#666A3F",
+    "#68141B",
   ];
   const Circle = ({ color }) => (
     <Box
@@ -30,6 +30,7 @@ function DressCode() {
       alignItems="center"
       style={{
         // minHeight: "100vh",
+
         padding: "0rem 1rem 0rem 1rem",
       }}
     >
@@ -42,7 +43,10 @@ function DressCode() {
           justifyContent: "center",
         }}
         align="center"
-        style={{ minHeight: "80vh" }}
+        style={{
+          minHeight: "70vh",
+          maxWidth: "400px",
+        }}
       >
         <Typography
           variant="script2"
@@ -58,7 +62,7 @@ function DressCode() {
           align="center"
           // sx={{ paddingBottom: "5vh" }}
         >
-          PLEASE COME IN FORMAR ATTIRE
+          PLEASE COME IN FORMAL ATTIRE
         </Typography>
         <Grid
           container
@@ -83,7 +87,7 @@ function DressCode() {
               style={{ width: "auto", height: "30px" }}
             />
             <Typography variant="body1" align="center" gutterBottom>
-              Evening gown, coktail dress or dressy jumpsuit
+              Evening gown, cocktail dress or dressy jumpsuit
             </Typography>
           </Grid>
         </Grid>
@@ -94,7 +98,7 @@ function DressCode() {
           alignItems="center"
           xl={12}
           spacing={2}
-          sx={{ padding: "3vh " }}
+          sx={{ padding: "5vh" }}
           gt
         >
           {colors.map((color, index) => (
@@ -109,7 +113,7 @@ function DressCode() {
           align="center"
           sx={{ paddingBottom: "5vh" }}
         >
-          We kindly encourage our guests to dress in our color palete on our
+          We kindly encourage our guests to dress in our color pallete on our
           special day
         </Typography>
       </Grid>

@@ -7,6 +7,7 @@ import { GOOGLE_DRIVE_API, GOOGLE_FOLDER_ID } from "../../app/config";
 import { useDispatch, useSelector } from "react-redux";
 import { getImageList } from "./contentSlice";
 import ImageCom from "./ImageCom";
+import { Divider } from "@mui/material";
 
 function Invitation() {
   /* ---------------------------------- modal --------------------------------- */
@@ -30,13 +31,13 @@ function Invitation() {
       container
       justifyContent="center"
       alignItems="center"
-      style={{ minHeight: "100vh" }}
+      // style={{ minHeight: "100vh" }}
     >
       <Grid
         item
         xs={12}
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/FIN_0355.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/FIN_0511.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "45vh",
@@ -79,14 +80,14 @@ function Invitation() {
           17:00PM SATURDAY
         </Typography>
         <Typography variant="h5" align="center" sx={{ color: "white" }}>
-          23 SEPTEMBER 2023
+          23 | SEPTEMBER | 2023
         </Typography>
       </Grid>
       <Grid
         item
         xs={12}
         style={{
-          height: "45vh",
+          height: "40vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -107,6 +108,10 @@ function Invitation() {
         </Typography>
         <Card
           variant="outlined"
+          hover
+          style={{
+            cursor: "pointer",
+          }}
           sx={{
             padding: "0.5rem 1rem 0.5rem 1rem",
             borderRadius: "0.5rem",

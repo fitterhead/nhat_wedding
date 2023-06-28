@@ -1,14 +1,35 @@
-import React from "react";
-import { Button, CardMedia, Container, Grid, Typography } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Button,
+  CardMedia,
+  Container,
+  Grid,
+  Typography,
+  Card,
+} from "@mui/material";
+import RsvpModal from "../../components/utils/RsvpModal";
 function Rsvp() {
+  /* ---------------------------------- modal --------------------------------- */
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  let random = null;
   return (
     <Grid
       container
       justifyContent="center"
       alignItems="center"
       style={{
-        // minHeight: "100vh",
-        padding: "0rem",
+        minHeight: "50vh",
+        padding: "0rem 0rem 6rem 0rem",
         backgroundColor: "#F1DEC9",
       }}
     >
@@ -22,39 +43,44 @@ function Rsvp() {
           paddingTop: "10vh",
         }}
         align="center"
-        // style={{ minHeight: "100vh" }}
+        style={{ maxWidth: "400px" }}
       >
         <CardMedia
           component="img"
-          sx={{ width: "100%", height: "auto", objectFit: "cover" }}
+          sx={{
+            width: "100%",
+            height: "auto",
+            objectFit: "cover",
+            paddingBottom: "2vh",
+          }}
           image={"/header2.png"}
           // alt={item.imageAlt}
         />
-        <Typography
-          variant="body1"
-          component="h2"
-          align="center"
-          sx={{ paddingTop: "5vh" }}
+
+        <Card
+        hover
+          variant="outlined"
+          style={{
+            cursor: "pointer",
+            margin: "0rem 6rem 0rem 6rem",
+          }}
+          sx={{
+            padding: "0.5rem 1rem 0.5rem 1rem",
+            borderRadius: "0.5rem",
+            backgroundColor: "transparent",
+            border: "1px solid #DFBB9D",
+          }}
         >
-          YES! I WOULDN’T MISSED IT
-        </Typography>
-        <Typography
-          variant="body1"
-          component="h2"
-          align="center"
-          sx={{ paddingBottom: "5vh" }}
-        >
-          NO, SADLY DECLINES
-        </Typography>
-        <Typography
-          variant="script3"
-          component="h2"
-          align="center"
-          sx={{ paddingBottom: "10vh" }}
-        >
-          I promise to dance/sing if you play:
-        </Typography>
+          <Typography
+            onClick={() => handleOpen()}
+            variant="body1"
+            align="center"
+          >
+            CLICK HERE TO RSVP
+          </Typography>
+        </Card>
       </Grid>
+      <RsvpModal open={open} onClose={handleClose} />
     </Grid>
   );
 }

@@ -5,6 +5,7 @@ import {
   CardContent,
   CardMedia,
   Container,
+  Divider,
   Grid,
   Typography,
 } from "@mui/material";
@@ -81,7 +82,7 @@ export default function TimeLine() {
           justifyContent: "center",
         }}
         align="center"
-        style={{ minHeight: "100vh" }}
+        style={{ minHeight: "100vh", maxWidth: "400px", padding: "0rem" }}
       >
         <Typography
           variant="h2"
@@ -98,52 +99,68 @@ export default function TimeLine() {
           // alt={item.imageAlt}
         />
         <Typography
-          variant="h1"
+          variant="h2"
           component="h2"
           align="center"
-          sx={{ paddingTop: "10vh", paddingBottom: "5vh" }}
+          sx={{
+            paddingTop: "10vh",
+            // paddingBottom: "5vh"
+          }}
         >
-          WEDDING <br />
+          WEDDING DAY <br />
           TIMELINE
         </Typography>
 
-        <Timeline sx={{ paddingBottom: "10vh" }} position="alternate">
-          {timelineData.map((item, index) => (
-            <TimelineItem>
-              <TimelineSeparator>
-                <TimelineConnector sx={{ backgroundColor: "#DFBB9D" }} />
-              </TimelineSeparator>
-              <TimelineContent>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={6}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-evenly",
-                      }}
-                    >
+        <Container maxWidth="sm">
+          <Timeline sx={{ paddingBottom: "10vh" }} position="alternate">
+            {timelineData.map((item, index) => (
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot sx={{ backgroundColor: "#DFBB9D" }} />
+                  <TimelineConnector sx={{ backgroundColor: "#DFBB9D" }} />
+                </TimelineSeparator>
+
+                <TimelineContent>
+                  <Grid
+                    container
+                    // alignItems="center"
+                    spacing={2}
+                  >
+                    <Grid item xs={12} md={12}>
+                      <Box
+                        sx={{
+                          // padding:"0rem 0rem 0rem 16px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-evenly",
+                        }}
+                      >
+                        {/* <Typography variant="script3" align="center">
+                          {item.event}
+                        </Typography> */}
+
+                        <CardMedia
+                          component="img"
+                          sx={{ width: 60, height: "auto", objectFit: "cover" }}
+                          image={`/${item.image}.png`}
+                          // alt={item.imageAlt}
+                        />
+                      </Box>
                       <Typography variant="script3" align="center">
                         {item.event}
                       </Typography>
+                    </Grid>
 
-                      <CardMedia
-                        component="img"
-                        sx={{ width: 60, height: "auto", objectFit: "cover" }}
-                        image={`/${item.image}.png`}
-                        // alt={item.imageAlt}
-                      />
-                    </Box>
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="h3">{item.time}</Typography>
+                      <Typography variant="body1">{item.info}</Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Typography variant="h3">{item.time}</Typography>
-                    <Typography variant="body1">{item.info}</Typography>
-                  </Grid>
-                </Grid>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </Container>
       </Grid>
     </Grid>
   );
