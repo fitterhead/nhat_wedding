@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Container, Grid, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -69,119 +69,119 @@ const TimelineImage = ({ image }) => (
 
 export default function OurLoveStory() {
   return (
+    <Container maxWidth="md"><Grid
+    container
+    justifyContent="center"
+    alignItems="center"
+    style={{ minHeight: "100vh", padding: "0rem"  }}
+  >
     <Grid
-      container
-      justifyContent="center"
-      alignItems="center"
-      style={{ minHeight: "100vh", padding: "0rem" }}
+      item
+      xs={12}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+      align="center"
+      style={{ minHeight: "100vh" }}
     >
-      <Grid
-        item
-        xs={12}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
+      <Typography
+        variant="script2"
+        component="h2"
         align="center"
-        style={{ minHeight: "100vh" }}
+        sx={{ paddingTop: "10vh" }}
       >
-        <Typography
-          variant="script2"
-          component="h2"
-          align="center"
-          sx={{ paddingTop: "10vh" }}
-        >
-          Our Love Story
-        </Typography>
+        Our Love Story
+      </Typography>
 
-        <Timeline sx={{ paddingBottom: "3rem" }} position="alternate">
-          {timelineData.map((item, index) => (
-            <TimelineItem
-              //  sx={{ paddingBottom: "1rem" }}
-              key={index}
-            >
-              <TimelineOppositeContent>
-                <Typography gutterBottom variant="h2">
-                  {item.time}
-                </Typography>
-                <Typography variant="h3">{item.event}</Typography>
-                <Typography
-                  gutterBottom
-                  // paddingBottom={"0.5rem"}
-                  variant="body2"
-                >
-                  {item.where}
-                </Typography>
-                <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
-                  {item.info}
-                </Typography>
-
-                {index === 3 && (
-                  <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
-                    "YES"
-                  </Typography>
-                )}
-                {index === 6 && (
-                  <>
-                    {" "}
-                    <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
-                      {item.info2}
-                    </Typography>
-                    <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
-                      {item.info3}
-                    </Typography>
-                  </>
-                )}
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot />
-                {index !== timelineData.length && <TimelineConnector />}
-              </TimelineSeparator>
-              <TimelineContent
-                sx={{
-                  // height:"80%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignContent: "center",
-                  alignItems: "center",
-                  paddingTop: "50px",
-                }}
+      <Timeline sx={{ paddingBottom: "3rem" }} position="alternate">
+        {timelineData.map((item, index) => (
+          <TimelineItem
+            //  sx={{ paddingBottom: "1rem" }}
+            key={index}
+          >
+            <TimelineOppositeContent>
+              <Typography gutterBottom variant="h2">
+                {item.time}
+              </Typography>
+              <Typography variant="h3">{item.event}</Typography>
+              <Typography
+                gutterBottom
+                // paddingBottom={"0.5rem"}
+                variant="body2"
               >
-                <TimelineImage image={`/${item.image}.jpg`} />
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          backgroundColor: "transparent",
-          paddingBottom: "5rem",
-        }}
-      >
-        <Typography variant="h1" align="center" sx={{ paddingBottom: "3vh" }}>
-          PRE-WEDDING
-          <br />
-          MOMENTS
-        </Typography>
-        <Card>
-          <CardMedia
-            component="iframe"
-            title="Embedded Video"
-            // src="https://drive.google.com/file/d/1E42tn0dB5W4-2R271GXV54Hhl4UbjSto/preview"
-            src="https://www.youtube.com/embed/ziyxbljy2b0"
-            height="400"
-            width="auto"
-            allow="autoplay"
-          />
-        </Card>
-      </Grid>
+                {item.where}
+              </Typography>
+              <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                {item.info}
+              </Typography>
+
+              {index === 3 && (
+                <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                  "YES"
+                </Typography>
+              )}
+              {index === 6 && (
+                <>
+                  {" "}
+                  <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                    {item.info2}
+                  </Typography>
+                  <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                    {item.info3}
+                  </Typography>
+                </>
+              )}
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              {index !== timelineData.length && <TimelineConnector />}
+            </TimelineSeparator>
+            <TimelineContent
+              sx={{
+                // height:"80%",
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+                alignItems: "center",
+                paddingTop: "50px",
+              }}
+            >
+              <TimelineImage image={`/${item.image}.jpg`} />
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </Grid>
+    <Grid
+      item
+      xs={12}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        backgroundColor: "transparent",
+        paddingBottom: "5rem",
+      }}
+    >
+      <Typography variant="h1" align="center" sx={{ paddingBottom: "3vh" }}>
+        PRE-WEDDING
+        <br />
+        MOMENTS
+      </Typography>
+      <Card>
+        <CardMedia
+          component="iframe"
+          title="Embedded Video"
+          // src="https://drive.google.com/file/d/1E42tn0dB5W4-2R271GXV54Hhl4UbjSto/preview"
+          src="https://www.youtube.com/embed/ziyxbljy2b0"
+          height="400"
+          width="auto"
+          allow="autoplay"
+        />
+      </Card>
+    </Grid>
+  </Grid></Container>
   );
 }
