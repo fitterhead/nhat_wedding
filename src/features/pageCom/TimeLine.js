@@ -26,16 +26,18 @@ const timelineData = [
   },
   {
     time: "18:00",
-    event: "Toast",
-    info: "The ceremony",
-    image: "toast",
-  },
-  {
-    time: "18:30",
     event: "We do",
-    info: "Speeches and dinner",
+    info: "The ceremony",
     image: "wedo",
   },
+
+  {
+    time: "18:30",
+    event: "Toast",
+    info: "Speeches and dinner",
+    image: "toast",
+  },
+
   {
     time: "19:30",
     event: "We Party",
@@ -45,7 +47,8 @@ const timelineData = [
   {
     time: "20:00",
     event: "Bouquet Toss",
-    info: "To our next lucky girl",
+    info: "To our next",
+    info2: "lucky girl",
     image: "toss",
   },
 ];
@@ -135,10 +138,6 @@ export default function TimeLine() {
                           justifyContent: "space-evenly",
                         }}
                       >
-                        {/* <Typography variant="script3" align="center">
-                          {item.event}
-                        </Typography> */}
-
                         <CardMedia
                           component="img"
                           sx={{ width: 60, height: "auto", objectFit: "cover" }}
@@ -154,6 +153,9 @@ export default function TimeLine() {
                     <Grid item xs={12} md={12}>
                       <Typography variant="h3">{item.time}</Typography>
                       <Typography variant="body1">{item.info}</Typography>
+                      {index === 4 && (
+                        <Typography variant="body1">{item.info2}</Typography>
+                      )}
                     </Grid>
                   </Grid>
                 </TimelineContent>

@@ -52,7 +52,7 @@ function DressCode() {
           variant="script2"
           component="h2"
           align="center"
-          // sx={{ paddingTop: "10vh" }}
+          sx={{ paddingTop: "10vh" }}
         >
           Dresscode
         </Typography>

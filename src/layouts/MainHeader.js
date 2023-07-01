@@ -38,6 +38,14 @@ function MainHeader() {
   const handlePage = (page) => {
     console.log(page, "page");
 
+    if (page === "RSVP") {
+      scroller.scrollTo("invitation", {
+        duration: 500,
+        smooth: true,
+        offset: -50, // Adjust the offset as needed to align the component
+      });
+    }
+
     scroller.scrollTo(page.toLowerCase(), {
       duration: 500,
       smooth: true,
@@ -54,10 +62,9 @@ function MainHeader() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            sx={{  fontSize: "16px" }}
-            variant="script3"
-          >Yusaku & Minh Nhat</Typography>
+          <Typography sx={{ fontSize: "18px" }} variant="script3">
+            Yusaku & Minh Nhat
+          </Typography>
           <Box
             sx={{
               flexGrow: 1,

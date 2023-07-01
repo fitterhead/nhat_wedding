@@ -56,7 +56,9 @@ const timelineData = [
     time: "23.09.2023",
     event: "Save the date",
     where: "Saigon, Vietnam",
-    info: "Finally the best day is here! We tie the knot ❤",
+    info: "Finally the best day ",
+    info2: "is here!",
+    info3: "We tie the knot ❤",
     image: "7",
   },
 ];
@@ -120,6 +122,17 @@ export default function OurLoveStory() {
                     "YES"
                   </Typography>
                 )}
+                {index === 6 && (
+                  <>
+                    {" "}
+                    <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                      {item.info2}
+                    </Typography>
+                    <Typography sx={{ paddingLeft: "0rem" }} variant="body1">
+                      {item.info3}
+                    </Typography>
+                  </>
+                )}
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <TimelineDot />
@@ -161,7 +174,8 @@ export default function OurLoveStory() {
           <CardMedia
             component="iframe"
             title="Embedded Video"
-            src="https://drive.google.com/file/d/1E42tn0dB5W4-2R271GXV54Hhl4UbjSto/preview"
+            // src="https://drive.google.com/file/d/1E42tn0dB5W4-2R271GXV54Hhl4UbjSto/preview"
+            src="https://www.youtube.com/embed/ziyxbljy2b0"
             height="400"
             width="auto"
             allow="autoplay"

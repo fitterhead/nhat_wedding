@@ -6,6 +6,7 @@ import {
   Grid,
   Typography,
   Card,
+  Paper,
 } from "@mui/material";
 import RsvpModal from "../../components/utils/RsvpModal";
 function Rsvp() {
@@ -57,7 +58,7 @@ function Rsvp() {
           // alt={item.imageAlt}
         />
 
-        <Card
+        {/* <Card
         hover
           variant="outlined"
           style={{
@@ -70,15 +71,22 @@ function Rsvp() {
             backgroundColor: "transparent",
             border: "1px solid #DFBB9D",
           }}
+        > */}
+
+        <Typography
+          style={{
+            cursor: "pointer",
+            paddingLeft: "1rem",
+            fontSize:"20px"
+          }}
+          onClick={() => handleOpen()}
+          variant="body2"
+          align="center"
         >
-          <Typography
-            onClick={() => handleOpen()}
-            variant="body1"
-            align="center"
-          >
-            CLICK HERE TO RSVP
-          </Typography>
-        </Card>
+          Click here to RSVP
+        </Typography>
+
+        {/* </Card> */}
       </Grid>
       <RsvpModal open={open} onClose={handleClose} />
     </Grid>

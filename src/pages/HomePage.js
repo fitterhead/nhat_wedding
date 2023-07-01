@@ -33,9 +33,9 @@ function HomePage() {
       <Element name="memory" className="element">
         <WeddingMemory />
       </Element>
-      <Element name="rsvp" className="element">
+      {/* <Element name="rsvp" className="element">
         <Rsvp />
-      </Element>
+      </Element> */}
     </Container>
   );
 }
