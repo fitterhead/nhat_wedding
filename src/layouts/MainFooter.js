@@ -53,6 +53,7 @@ function MainFooter() {
             height: "auto",
             objectFit: "cover",
             paddingBottom: "2vh",
+            paddingRight:"33px"
           }}
           image={"/header2.png"}
           // alt={item.imageAlt}
@@ -76,7 +77,7 @@ function MainFooter() {
         <Typography
           style={{
             cursor: "pointer",
-            paddingLeft: "1rem",
+            paddingRight: "14px",
             fontSize:"18px"
           }}
           onClick={() => handleOpen()}
