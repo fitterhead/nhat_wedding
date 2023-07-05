@@ -53,7 +53,7 @@ function MainFooter() {
             height: "auto",
             objectFit: "cover",
             paddingBottom: "2vh",
-            paddingRight:"33px"
+            paddingRight: "33px",
           }}
           image={"/header2.png"}
           // alt={item.imageAlt}
@@ -74,18 +74,27 @@ function MainFooter() {
           }}
         > */}
 
-        <Typography
-          style={{
-            cursor: "pointer",
-            paddingRight: "14px",
-            fontSize:"18px"
+        <Button
+          sx={{
+            borderRadius: "0.5rem",
+            backgroundColor: "transparent",
+            border: "1px solid #DFBB9D",
           }}
-          onClick={() => handleOpen()}
-          variant="body2"
-          align="center"
+          variant="outlined"
         >
-          Click here to RSVP
-        </Typography>
+          <Typography
+            style={{
+              cursor: "pointer",
+              paddingRight: "14px",
+              fontSize: "18px",
+            }}
+            onClick={() => handleOpen()}
+            variant="body1"
+            align="center"
+          >
+            Click here to RSVP
+          </Typography>
+        </Button>
 
         {/* </Card> */}
       </Grid>

@@ -77,13 +77,13 @@ function Rsvp() {
           style={{
             cursor: "pointer",
             paddingLeft: "1rem",
-            fontSize:"20px"
+            fontSize: "20px",
           }}
           onClick={() => handleOpen()}
           variant="body2"
           align="center"
         >
-          Click here to RSVP
+          <Button variant="outlined">Click here to RSVP</Button>
         </Typography>
 
         {/* </Card> */}

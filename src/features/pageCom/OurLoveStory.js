@@ -14,7 +14,7 @@ const timelineData = [
     time: "04.2018",
     event: "Our First Met",
     where: "Okinawa, Japan",
-    info: "We sat next to each other on a plan from Osaka to Okinawa",
+    info: "We sat next to each other on a plane from Osaka to Okinawa",
     image: "1",
   },
   {

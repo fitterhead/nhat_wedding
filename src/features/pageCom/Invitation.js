@@ -80,7 +80,7 @@ function Invitation() {
           17:00PM SATURDAY
         </Typography>
         <Typography variant="h5" align="center" sx={{ color: "white" }}>
-          23 | SEPTEMBER | 2023
+          23rd  |  SEPTEMBER  |  2023
         </Typography>
       </Grid>
       <Grid
