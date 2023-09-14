@@ -45,7 +45,7 @@ const timelineData = [
     image: "party",
   },
   {
-    time: "20:00",
+    time: "20:30",
     event: "Bouquet Toss",
     info: "To our next",
     info2: "lucky girl",
